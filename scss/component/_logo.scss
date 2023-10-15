@@ -1,0 +1,26 @@
+@use "../abstract";
+.logo {
+    display: flex;
+    column-gap: 14px;
+    align-items: center;
+    color: inherit;
+
+    @include abstract.responsive(sm){
+        column-gap: 10px;
+    }
+
+    &__heading {
+        font-size: 2.2rem;
+        font-weight: 700;
+        @include abstract.responsive(sm){
+            font-size: 1.8rem;
+        }
+    }
+    &__icon {
+        @include abstract.responsive(xl){
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+

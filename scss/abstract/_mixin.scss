@@ -1,0 +1,14 @@
+$breakPoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin responsive ($device) {
+    $size : map-get($breakPoints, $device) - 0.02;
+    @media (max-width: $size) {
+        @content;
+    }
+}

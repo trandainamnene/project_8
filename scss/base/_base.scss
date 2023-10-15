@@ -1,0 +1,23 @@
+:root { 
+    font-size: 62.5%;
+    --text-color : #1A162E;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Gordita" , sans-serif;
+    color: var(--text-color);
+}
+
+button , select , textarea {
+    background: transparent;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}

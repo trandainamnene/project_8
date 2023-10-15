@@ -1,0 +1,104 @@
+@use "../abstract";
+
+.header {
+    background-color: #eeeeee;
+    padding: 30px 0;
+    &-top {
+        display: flex;
+        align-items: center;
+        @include abstract.responsive(sm){
+            justify-content: space-between;
+        }
+    }
+}
+
+.more {
+    display: none;
+    @include abstract.responsive(xl){
+        display: block;
+    }
+}
+
+
+.nav {
+    margin-left: 144px;
+    @include abstract.responsive(xl){
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    &__icon {
+        margin-top: 3px;
+    }
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-left: auto;
+
+    @include abstract.responsive(sm){
+        margin-left: 0;
+    }
+
+
+    &__group {
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        display: flex;
+        align-items: center;
+        @include abstract.responsive(md){
+            display: none;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__btn {
+        padding: 13px 20px;
+        font-family: inherit;
+        font-size: 1.5rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        cursor: pointer;
+        color: inherit;
+    }
+
+    &__btn--single {
+        padding: 13px;
+    }
+
+    &__avt {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.seperate {
+    width: 1px;
+    height: 30px;
+    background: #ededf6;
+}
