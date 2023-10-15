@@ -6,7 +6,7 @@
     &-top {
         display: flex;
         align-items: center;
-        @include abstract.responsive(sm){
+        @include abstract.responsive(md){
             justify-content: space-between;
         }
     }
@@ -50,7 +50,7 @@
     column-gap: 20px;
     margin-left: auto;
 
-    @include abstract.responsive(sm){
+    @include abstract.responsive(md){
         margin-left: 0;
     }
 
