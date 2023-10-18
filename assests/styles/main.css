@@ -54,7 +54,6 @@ table {
 
 :root {
   font-size: 62.5%;
-  --text-color: #1A162E;
 }
 
 * {
@@ -65,6 +64,7 @@ body {
   font-size: 1.6rem;
   font-family: "Gordita", sans-serif;
   color: var(--text-color);
+  transition: all 0.4s;
 }
 
 button, select, textarea {
@@ -74,6 +74,11 @@ button, select, textarea {
 
 a {
   text-decoration: none;
+}
+
+.icon {
+  filter: var(--icon-filter);
+  transition: all 0.4s;
 }
 
 .row > *, .container-fluid, .container {
@@ -1108,7 +1113,7 @@ a {
   }
 }
 .header {
-  background-color: #eeeeee;
+  background-color: var(--background);
   padding: 30px 0;
 }
 .header-top {
@@ -1165,9 +1170,9 @@ a {
   }
 }
 .action__group {
-  background: #ffffff;
+  background: var(--action-group-color);
   border-radius: 8px;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  box-shadow: 0px 20px 60px 10px var(--color-box-shadow);
   display: flex;
   align-items: center;
 }
@@ -1202,6 +1207,10 @@ a {
   border-radius: 8px;
   box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
 }
+.action .icon {
+  width: 24px;
+  height: 24px;
+}
 
 .seperate {
   width: 1px;
@@ -1234,6 +1243,22 @@ a {
     width: 24px;
     height: 24px;
   }
+}
+
+:root {
+  --text-color: #1A162E;
+  --icon-filter: brightness(0) saturate(100%) invert(8%) sepia(12%) saturate(4506%) hue-rotate(218deg) brightness(89%) contrast(95%);
+  --background: #EEEEEE;
+  --color-box-shadow: rgba(237, 237, 246, 0.2);
+  --action-group-color: #FFFFFF;
+}
+
+:root.dark {
+  --text-color: #FFFFFF;
+  --icon-filter: brightness(0) saturate(100%) invert(98%) sepia(1%) saturate(282%) hue-rotate(351deg) brightness(118%) contrast(100%);
+  --background: #171C28;
+  --color-box-shadow: rgba(0, 0, 0, 0.20);
+  --action-group-color: #292E39;
 }
 
 /*# sourceMappingURL=main.css.map */

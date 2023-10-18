@@ -1,6 +1,6 @@
 :root { 
     font-size: 62.5%;
-    --text-color : #1A162E;
+
 }
 
 * {
@@ -11,6 +11,7 @@ body {
     font-size: 1.6rem;
     font-family: "Gordita" , sans-serif;
     color: var(--text-color);
+    transition: all .4s;
 }
 
 button , select , textarea {
@@ -21,3 +22,9 @@ button , select , textarea {
 a {
     text-decoration: none;
 }
+
+.icon {
+    filter: var(--icon-filter);
+    transition: all .4s;
+}
+

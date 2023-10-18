@@ -1,12 +1,12 @@
 @use "../abstract";
 
 .header {
-    background-color: #eeeeee;
+    background-color: var(--background);
     padding: 30px 0;
     &-top {
         display: flex;
         align-items: center;
-        @include abstract.responsive(md){
+        @include abstract.responsive(md) {
             justify-content: space-between;
         }
     }
@@ -14,15 +14,14 @@
 
 .more {
     display: none;
-    @include abstract.responsive(xl){
+    @include abstract.responsive(xl) {
         display: block;
     }
 }
 
-
 .nav {
     margin-left: 144px;
-    @include abstract.responsive(xl){
+    @include abstract.responsive(xl) {
         display: none;
     }
 
@@ -50,18 +49,17 @@
     column-gap: 20px;
     margin-left: auto;
 
-    @include abstract.responsive(md){
+    @include abstract.responsive(md) {
         margin-left: 0;
     }
 
-
     &__group {
-        background: #ffffff;
+        background: var(--action-group-color);
         border-radius: 8px;
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        box-shadow: 0px 20px 60px 10px var(--color-box-shadow);
         display: flex;
         align-items: center;
-        @include abstract.responsive(md){
+        @include abstract.responsive(md) {
             display: none;
         }
     }
@@ -94,6 +92,11 @@
         object-fit: cover;
         border-radius: 8px;
         box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
     }
 }
 
